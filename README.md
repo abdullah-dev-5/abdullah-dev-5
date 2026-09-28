@@ -1,19 +1,19 @@
 <div align="center">
 
 ```
- ██████ ╗██╗   ██╗██████╗ ███████╗██████╗ ██████╗ ██╗   ██╗███╗   ██╗██╗  ██╗
- ██╔════╝╚██╗ ██╔╝██╔══██╗██╔════╝██╔══██╗██╔══██╗██║   ██║████╗  ██║██║ ██╔╝
- ██║      ╚████╔╝ ██████╔╝█████╗  ██████╔╝██████╔╝██║   ██║██╔██╗ ██║█████╔╝ 
- ██║       ╚██╔╝  ██╔══██╗██╔══╝  ██╔══██╗██╔═══╝ ██║   ██║██║╚██╗██║██╔═██╗ 
- ╚██████╗   ██║   ██████╔╝███████╗██║  ██║██║     ╚██████╔╝██║ ╚████║██║  ██╗
-  ╚═════╝   ╚═╝   ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝      ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝
+ ██████╗ ██╗   ██╗██████╗ ███████╗██████╗ ██████╗ ██╗   ██╗███╗   ██╗██╗  ██╗
+ ██╔══██╗╚██╗ ██╔╝██╔══██╗██╔════╝██╔══██╗██╔══██╗██║   ██║████╗  ██║██║ ██╔╝
+ ██║  ██║ ╚████╔╝ ██████╔╝█████╗  ██████╔╝██████╔╝██║   ██║██╔██╗ ██║█████╔╝ 
+ ██║  ██║  ╚██╔╝  ██╔══██╗██╔══╝  ██╔══██╗██╔═══╝ ██║   ██║██║╚██╗██║██╔═██╗ 
+ ██████╔╝   ██║   ██████╔╝███████╗██║  ██║██║     ╚██████╔╝██║ ╚████║██║  ██╗
+ ╚═════╝    ╚═╝   ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝      ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝
 ```
 
 </div>
 
 <div align="center">
 
-![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Orbitron&size=32&duration=3000&pause=1000&color=00FF41&center=true&vCenter=true&width=700&lines=🎯+SYSTEM%3A+CONNECTED;👤+USER%3A+AA.DEV;🚀+ROLE%3A+Full+Stack+Developer;🌍+STATUS%3A+ONLINE+%26+LEARNING;⚡+MODE%3A+BUILDING+AWESOME+PROJECTS)
+![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Orbitron\&size=32\&duration=3000\&pause=1000\&color=00FF41\&center=true\&vCenter=true\&width=700\&lines=SYSTEM%3A+CONNECTED;USER%3A+AA.DEV;ROLE%3A+Full+Stack+Developer;STATUS%3A+ONLINE+%26+LEARNING;MODE%3A+BUILDING+AWESOME+PROJECTS)
 
 </div>
 
@@ -25,7 +25,7 @@
 
 <img src="https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif" width="400" alt="Matrix Rain">
 
-![Visitor Badge](https://komarev.com/ghpvc/?username=abdullah-Dev-12125-code&color=00FF41&style=flat-square&label=👁️+NEURAL+CONNECTIONS)
+![Visitor Badge](https://komarev.com/ghpvc/?username=abdullah-dev-5\&color=00FF41\&style=flat-square\&label=NEURAL+CONNECTIONS)
 
 </div>
 
@@ -69,13 +69,15 @@ SUPERPOWER: ⚡ Turning Ideas Into Code ⚡
 ```
 
 **What I Love:**
-- 💻 Building things with code from scratch
-- 🎮 Gaming & Competitive Challenges  
-- 🧠 Solving Complex Algorithms
-- 🚀 Creating Tools That Help People
-- 📚 Learning New Technologies Daily
+
+* 💻 Building things with code from scratch
+* 🎮 Gaming & Competitive Challenges
+* 🧠 Solving Complex Algorithms
+* 🚀 Creating Tools That Help People
+* 📚 Learning New Technologies Daily
 
 **My Philosophy:**
+
 > *Code is the language of creation. I believe in learning fearlessly, building boldly, and creating software that makes a real impact on the world.*
 
 <br clear="right"/>
@@ -88,67 +90,57 @@ SUPERPOWER: ⚡ Turning Ideas Into Code ⚡
 
 ### 🔴 LANGUAGES
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge\&logo=javascript\&logoColor=black)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge\&logo=cplusplus\&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge\&logo=html5\&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge\&logo=css3\&logoColor=white)
 
 ### 🟢 FRONTEND
 
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Framer](https://img.shields.io/badge/Framer-0055FF?style=for-the-badge&logo=framer&logoColor=white)
-![Photoshop](https://img.shields.io/badge/Photoshop-31A8FF?style=for-the-badge&logo=adobe-photoshop&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge\&logo=react\&logoColor=black)
+![Framer](https://img.shields.io/badge/Framer-0055FF?style=for-the-badge\&logo=framer\&logoColor=white)
+![Photoshop](https://img.shields.io/badge/Photoshop-31A8FF?style=for-the-badge\&logo=adobe-photoshop\&logoColor=white)
 
 ### 🔵 BACKEND
 
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
-![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge\&logo=node.js\&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge\&logo=flask\&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge\&logo=django\&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge\&logo=fastapi\&logoColor=white)
 
 ### 🟡 DATABASES
 
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge\&logo=sqlite\&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge\&logo=mysql\&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge\&logo=postgresql\&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge\&logo=supabase\&logoColor=white)
 
 ### 🟣 TOOLS & DEVOPS
 
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![VSCode](https://img.shields.io/badge/VS%20Code-0078D4?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37726?style=for-the-badge&logo=jupyter&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge\&logo=git\&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge\&logo=github\&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge\&logo=linux\&logoColor=black)
+![VSCode](https://img.shields.io/badge/VS%20Code-0078D4?style=for-the-badge\&logo=visual-studio-code\&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37726?style=for-the-badge\&logo=jupyter\&logoColor=white)
 
 </div>
 
 ---
 
-## 📊 >> SYSTEM_ANALYTICS.LOG
+## 📊 SYSTEM_ANALYTICS.LOG
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=abdullah-Dev-12125-code&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=00FF41&text_color=FFFFFF&icon_color=FF0080&count_private=true)
+### GitHub Activity
 
-</div>
+![GitHub Profile Summary](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=abdullah-dev-5\&theme=github_dark)
 
-<div align="center">
+<br>
 
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=abdullah-Dev-12125-code&theme=radical&hide_border=true&background=0D1117&ring=00FF41&fire=FF0080&currStreakLabel=00FFFF)
+![GitHub Stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=abdullah-dev-5\&theme=github_dark)
 
-</div>
-
-<div align="center">
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=abdullah-Dev-12125-code&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=00FF41&text_color=FFFFFF)
-
-</div>
-
-<div align="center">
-
-![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=abdullah-Dev-12125-code&bg_color=0D1117&color=00FF41&line=FF0080&point=00FFFF&area=true&hide_border=true)
+![Top Languages](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=abdullah-dev-5\&theme=github_dark)
 
 </div>
 
@@ -211,11 +203,11 @@ SUPERPOWER: ⚡ Turning Ideas Into Code ⚡
 ╚════════════════════════════════════════════════════╝
 ```
 
-| Status | Project | Description |
-|--------|---------|-------------|
-| 🟢 Active | Full Stack Web App | Building production-ready application |
-| 🟡 In Progress | Algorithm Visualizer | DSA visualization tool |
-| 🟣 Research | Machine Learning | Exploring ML algorithms |
+| Status         | Project              | Description                           |
+| -------------- | -------------------- | ------------------------------------- |
+| 🟢 Active      | Full Stack Web App   | Building production-ready application |
+| 🟡 In Progress | Algorithm Visualizer | DSA visualization tool                |
+| 🟣 Research    | Machine Learning     | Exploring ML algorithms               |
 
 **Coming Soon:** 🚀 Live projects with repos!
 
@@ -247,11 +239,11 @@ TERTIARY_OBJECTIVE:
 ═════════════════════════════════════════════════════════════
 
 PERSONAL_QUOTE:
-  "Code like the laws of physics — precise, powerful, 
+  "Code like the laws of physics — precise, powerful,
    and shaping the universe around you."
 
 COLLABORATION_STATUS: ✓ ENABLED
-LEARNING_STATUS: ✓ ACTIVE  
+LEARNING_STATUS: ✓ ACTIVE
 CONNECTION_STATUS: ✓ ALWAYS_ONLINE
 READY_FOR_CHALLENGES: ✓ TRUE
 ```
@@ -270,10 +262,10 @@ READY_FOR_CHALLENGES: ✓ TRUE
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/🔗%20LINKEDIN-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abdullah-hussain-6b179739b/)
-[![GitHub](https://img.shields.io/badge/📁%20GITHUB-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/abdullah-Dev-12125-code)
-[![Gmail](https://img.shields.io/badge/📧%20EMAIL-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:abdullahdev12125@gmail.com)
-[![Discord](https://img.shields.io/badge/💬%20DISCORD-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/noobplayeryt)
+[![LinkedIn](https://img.shields.io/badge/🔗%20LINKEDIN-0077B5?style=for-the-badge\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/abdullah-hussain-6b179739b/)
+[![GitHub](https://img.shields.io/badge/📁%20GITHUB-181717?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/abdullah-dev-5)
+[![Gmail](https://img.shields.io/badge/📧%20EMAIL-D14836?style=for-the-badge\&logo=gmail\&logoColor=white)](mailto:abdullahdev12125@gmail.com)
+[![Discord](https://img.shields.io/badge/💬%20DISCORD-7289DA?style=for-the-badge\&logo=discord\&logoColor=white)](https://discord.gg/noobplayeryt)
 
 </div>
 
@@ -283,13 +275,13 @@ READY_FOR_CHALLENGES: ✓ TRUE
 
 <div align="center">
 
-![Stats](https://img.shields.io/badge/⚡%20Primary%20Tech-Python%20|%20JavaScript%20|%20C%2B%2B-00FF41?style=for-the-badge&logo=code&logoColor=00FF41)
+![Stats](https://img.shields.io/badge/⚡%20Primary%20Tech-Python%20%7C%20JavaScript%20%7C%20C%2B%2B-00FF41?style=for-the-badge\&logo=code\&logoColor=00FF41)
 
-![Experience](https://img.shields.io/badge/🛠️%20Experience-Beginner%20|%20Student%20Projects%20|%201%2B%20Year-FF0080?style=for-the-badge)
+![Experience](https://img.shields.io/badge/%F0%9F%9B%A0%EF%B8%8F%20Experience-Beginner%20%7C%20Student%20Projects%20%7C%201%2B%20Year-FF0080?style=for-the-badge)
 
-![Hours](https://img.shields.io/badge/💪%20Weekly%20Coding-35%2B%20Hours-00FFFF?style=for-the-badge&logoColor=black)
+![Hours](https://img.shields.io/badge/%F0%9F%92%AA%20Weekly%20Coding-35%2B%20Hours-00FFFF?style=for-the-badge\&logoColor=black)
 
-![Trophy](https://github-trophies.vercel.app/?username=abdullah-Dev-12125-code&theme=radical&no-frame=true&no-bg=true&margin-w=4)
+![Trophy](https://github-trophies.vercel.app/?username=abdullah-dev-5\&theme=radical\&no-frame=true\&no-bg=true\&margin-w=4)
 
 </div>
 
@@ -306,10 +298,10 @@ READY_FOR_CHALLENGES: ✓ TRUE
 │ ✓ Started Coding Journey                    │
 │ ✓ Built First Projects                      │
 │ ✓ Mastering DSA Concepts                    │
-│ 🔜 Deploy First Production App               │
-│ 🔜 Contribute to Open Source                 │
-│ 🔜 Become Full Stack Master                  │
-│ 🔜 Build AI/ML Projects                      │
+│ 🔜 Deploy First Production App              │
+│ 🔜 Contribute to Open Source                │
+│ 🔜 Become Full Stack Master                 │
+│ 🔜 Build AI/ML Projects                     │
 └─────────────────────────────────────────────┘
 ```
 
@@ -339,10 +331,10 @@ READY_FOR_CHALLENGES: ✓ TRUE
 
 ### 🚀 Ready to collaborate? Let's build something amazing!
 
-**Made with ❤️ by Abdullah Hussain**  
+**Made with ❤️ by Abdullah Hussain**
 *Forever Learning • Always Building • Constantly Improving*
 
 ![Made Badge](https://img.shields.io/badge/Made%20with-Love%20%26%20Code-FF0080?style=flat-square)
-![Last Updated](https://img.shields.io/badge/Last%20Updated-2025-00FF41?style=flat-square)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-2026-00FF41?style=flat-square)
 
 </div>

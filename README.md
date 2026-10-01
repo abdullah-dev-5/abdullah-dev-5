@@ -1,22 +1,22 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D0D0D,100:C9853A&height=155&section=header&text=ABDULLAH%20HUSSAIN&fontSize=34&fontColor=E8E3D9&fontAlignY=40&desc=Backend%20Developer%20%7C%20Python%20%C2%B7%20Django%20%C2%B7%20Software%20Engineering&descSize=13&descColor=8A8680&descAlignY=60&animation=fadeIn" width="100%" alt="Abdullah Hussain — Backend Developer" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D0D0D,100:3FB950&height=155&section=header&text=ABDULLAH%20HUSSAIN&fontSize=34&fontColor=E8E3D9&fontAlignY=40&desc=Backend%20Developer%20%7C%20Python%20%C2%B7%20Django%20%C2%B7%20Software%20Engineering&descSize=13&descColor=8A8680&descAlignY=60&animation=fadeIn" width="100%" alt="Abdullah Hussain — Backend Developer" />
 
-<br>
 
 <a href="https://github.com/abdullah-dev-5">
-  <img src="https://img.shields.io/badge/GitHub-161616?style=for-the-badge&logo=github&logoColor=C9853A" alt="GitHub" />
+  <img src="https://img.shields.io/badge/GitHub-161616?style=for-the-badge&logo=github&logoColor=3FB950" alt="GitHub" />
 </a>
-&nbsp;
+   
 <a href="https://www.linkedin.com/in/abdullah-hussain-6b179739b/">
-  <img src="https://img.shields.io/badge/LinkedIn-161616?style=for-the-badge&logo=linkedin&logoColor=C9853A" alt="LinkedIn" />
-</a>
-&nbsp;
+  <img src="https://img.shields.io/badge/LinkedIn-161616?style=for-the-badge&logo=linkedin&logoColor=3FB950" alt="LinkedIn" />
+</a> 
+
 <a href="mailto:abdullahdev12125@gmail.com">
-  <img src="https://img.shields.io/badge/Email-161616?style=for-the-badge&logo=gmail&logoColor=C9853A" alt="Email" />
+  <img src="https://img.shields.io/badge/Email-161616?style=for-the-badge&logo=gmail&logoColor=3FB950" alt="Email" />
 </a>
 
-<br><br>
+<br>
+<br>
 
 <code>Python</code>
  ·  <code>Django</code>
@@ -195,7 +195,7 @@ Most of my activity comes from building, debugging, learning, and iterating on p
 
 <div align="center">
 
-<img src="https://streak-stats.demolab.com?user=abdullah-dev-5&background=0D0D0D&ring=C9853A&fire=C9853A&currStreakNum=E8E3D9&currStreakLabel=C9853A&sideNums=E8E3D9&sideLabels=8A8680&dates=8A8680&stroke=2A2622&border=2A2622" width="100%" alt="GitHub streak" />
+<img src="https://streak-stats.demolab.com?user=abdullah-dev-5&background=0D0D0D&ring=3FB950&fire=3FB950&currStreakNum=E8E3D9&currStreakLabel=3FB950&sideNums=E8E3D9&sideLabels=8A8680&dates=8A8680&stroke=2A2622&border=2A2622" width="100%" alt="GitHub streak" />
 
 <br><br>
 

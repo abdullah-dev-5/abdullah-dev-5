@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D0D0D,100:3FB950&height=155&section=header&text=ABDULLAH%20HUSSAIN&fontSize=34&fontColor=E8E3D9&fontAlignY=40&desc=Backend%20Developer%20%7C%20Python%20%C2%B7%20Django%20%C2%B7%20Software%20Engineering&descSize=13&descColor=8A8680&descAlignY=60&animation=fadeIn" width="100%" alt="Abdullah Hussain — Backend Developer" />
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0D1117&height=140&section=header&text=ABDULLAH%20HUSSAIN&fontSize=38&fontColor=F0F6FC&fontAlignY=42&desc=Python%20%7C%20Django%20%7C%20Backend%20Engineering&descSize=14&descColor=8B949E&descAlignY=65" width="100%" alt="Abdullah Hussain" />
 
 
 <a href="https://github.com/abdullah-dev-5">

@@ -1,339 +1,124 @@
-<div align="center">
- 
-```
- ██████╗██╗   ██╗██████╗ ███████╗██████╗ ██████╗ ██╗   ██╗███╗   ██╗██╗  ██╗
-██╔════╝╚██╗ ██╔╝██╔══██╗██╔════╝██╔══██╗██╔══██╗██║   ██║████╗  ██║██║ ██╔╝
-██║      ╚████╔╝ ██████╔╝█████╗  ██████╔╝██████╔╝██║   ██║██╔██╗ ██║█████╔╝
-██║       ╚██╔╝  ██╔══██╗██╔══╝  ██╔══██╗██╔═══╝ ██║   ██║██║╚██╗██║██╔═██╗
-╚██████╗   ██║   ██████╔╝███████╗██║  ██║██║     ╚██████╔╝██║ ╚████║██║  ██╗
- ╚═════╝   ╚═╝   ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝      ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝
-```
-</div>
-
+<!-- ═══════════════ HEADER ═══════════════ -->
 <div align="center">
 
-![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Orbitron\&size=32\&duration=3000\&pause=1000\&color=00FF41\&center=true\&vCenter=true\&width=700\&lines=SYSTEM%3A+CONNECTED;USER%3A+AA.DEV;ROLE%3A+Full+Stack+Developer;STATUS%3A+ONLINE+%26+LEARNING;MODE%3A+BUILDING+AWESOME+PROJECTS)
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0D1117,100:00E5FF&height=150&section=header&text=ABDULLAH%20HUSSAIN&fontSize=38&fontColor=FFFFFF&fontAlign=50&fontAlignY=45&desc=Full%20Stack%20Developer%20%C2%B7%20CS%20Student&descSize=16&descAlignY=68" width="100%" alt="header" />
 
-</div>
+<a href="https://github.com/abdullah-dev-5">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&duration=3200&pause=1200&color=00E5FF&center=true&vCenter=true&width=620&lines=Building+web+apps+with+Django+%26+React;Learning+data+structures+%26+algorithms;Turning+ideas+into+shipped+software" alt="typing" />
+</a>
 
----
+<br/>
 
-<div align="center">
-
-# ⚡ NEURAL INTERFACE ACTIVATED ⚡
-
-<img src="https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif" width="400" alt="Matrix Rain">
-
-![Visitor Badge](https://komarev.com/ghpvc/?username=abdullah-dev-5\&color=00FF41\&style=flat-square\&label=NEURAL+CONNECTIONS)
+![Location](https://img.shields.io/badge/Karachi,_Pakistan-0D1117?style=flat-square&logo=googlemaps&logoColor=00E5FF&labelColor=0D1117&color=1F2937)
+![Status](https://img.shields.io/badge/Status-Open_to_collaborate-0D1117?style=flat-square&labelColor=0D1117&color=00E5FF)
+![Focus](https://img.shields.io/badge/Focus-Full_Stack_%2B_DSA-0D1117?style=flat-square&labelColor=0D1117&color=1F2937)
 
 </div>
 
----
+<br/>
 
-## 🔐 >> ACCESS GRANTED <<
+## `> about`
 
-<div align="center">
+I'm a computer science student who likes building things from scratch and understanding how they work underneath. Right now I'm shipping full stack projects, sharpening my problem solving with algorithms, and exploring machine learning.
 
-```diff
-+ NAME: M Abdullah Hussain
-+ ALIAS: AA.DEV | Full Stack Developer
-+ LOCATION: 🇵🇰 Karachi, Pakistan
-+ EXPERIENCE: 1+ Year | Student Projects
-+ STATUS: 🎯 LEARNING & BUILDING ✓
-+ MISSION: Transform Ideas Into Reality
+```text
+role      →  CS student · Full Stack Developer
+stack     →  Python · Django · JavaScript · React
+learning  →  DSA in Python · Machine Learning
+goal      →  Ship production-ready apps, contribute to open source
 ```
 
+<br/>
+
+## `> stack`
+
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-0D1117?style=for-the-badge&logo=python&logoColor=00E5FF)
+![JavaScript](https://img.shields.io/badge/JavaScript-0D1117?style=for-the-badge&logo=javascript&logoColor=00E5FF)
+![C++](https://img.shields.io/badge/C++-0D1117?style=for-the-badge&logo=cplusplus&logoColor=00E5FF)
+![HTML5](https://img.shields.io/badge/HTML5-0D1117?style=for-the-badge&logo=html5&logoColor=00E5FF)
+![CSS3](https://img.shields.io/badge/CSS3-0D1117?style=for-the-badge&logo=css3&logoColor=00E5FF)
+
+![React](https://img.shields.io/badge/React-0D1117?style=for-the-badge&logo=react&logoColor=00E5FF)
+![Django](https://img.shields.io/badge/Django-0D1117?style=for-the-badge&logo=django&logoColor=00E5FF)
+![Flask](https://img.shields.io/badge/Flask-0D1117?style=for-the-badge&logo=flask&logoColor=00E5FF)
+![FastAPI](https://img.shields.io/badge/FastAPI-0D1117?style=for-the-badge&logo=fastapi&logoColor=00E5FF)
+![Node.js](https://img.shields.io/badge/Node.js-0D1117?style=for-the-badge&logo=nodedotjs&logoColor=00E5FF)
+
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-0D1117?style=for-the-badge&logo=postgresql&logoColor=00E5FF)
+![MySQL](https://img.shields.io/badge/MySQL-0D1117?style=for-the-badge&logo=mysql&logoColor=00E5FF)
+![SQLite](https://img.shields.io/badge/SQLite-0D1117?style=for-the-badge&logo=sqlite&logoColor=00E5FF)
+![Supabase](https://img.shields.io/badge/Supabase-0D1117?style=for-the-badge&logo=supabase&logoColor=00E5FF)
+
+![Git](https://img.shields.io/badge/Git-0D1117?style=for-the-badge&logo=git&logoColor=00E5FF)
+![GitHub](https://img.shields.io/badge/GitHub-0D1117?style=for-the-badge&logo=github&logoColor=00E5FF)
+![Linux](https://img.shields.io/badge/Linux-0D1117?style=for-the-badge&logo=linux&logoColor=00E5FF)
+![VS Code](https://img.shields.io/badge/VS_Code-0D1117?style=for-the-badge&logo=visualstudiocode&logoColor=00E5FF)
+![Jupyter](https://img.shields.io/badge/Jupyter-0D1117?style=for-the-badge&logo=jupyter&logoColor=00E5FF)
+
 </div>
 
----
+<br/>
 
-## 👨‍💻 >> ABOUT_ME.EXE
+## `> projects`
 
-<img align="right" alt="Coding Gif" width="320" src="https://media.giphy.com/media/fuJPZBIIqzbt1kAYVc/giphy.gif">
+| Project | Description | Stack | Status |
+| :-- | :-- | :-- | :-- |
+| **Full Stack Web App** | Production-minded web application with auth, database and deployment | Django · PostgreSQL | 🟢 Active |
+| **Algorithm Visualizer** | Interactive tool for watching DSA algorithms run step by step | Python · JavaScript | 🟡 In progress |
+| **ML Experiments** | Exploring core machine learning algorithms and data analysis | Python · Jupyter | 🟣 Research |
 
-```yaml
-PROFILE:
-  Name: Abdullah Hussain
-  Role: CS Student & Aspiring Engineer
-  Passion: Building Real-World Solutions
-  
-CORE_TRAITS:
-  ✓ Logical Problem Solver
-  ✓ Fast Learner & Adaptor
-  ✓ Competitive Mindset
-  ✓ Team Player
-  ✓ Tech Enthusiast
-  
-SUPERPOWER: ⚡ Turning Ideas Into Code ⚡
+> Live demos and repositories are being added as projects ship. Watch this space.
+
+<br/>
+
+## `> currently`
+
+```text
+[■■■■■■■□□□]  DSA in Python        arrays · linked lists · trees · graphs · DP
+[■■■■■■□□□□]  Full stack web       Django · React · deployment
+[■■■□□□□□□□]  Machine learning     fundamentals · data analysis
 ```
 
-**What I Love:**
+<br/>
 
-* 💻 Building things with code from scratch
-* 🎮 Gaming & Competitive Challenges
-* 🧠 Solving Complex Algorithms
-* 🚀 Creating Tools That Help People
-* 📚 Learning New Technologies Daily
-
-**My Philosophy:**
-
-> *Code is the language of creation. I believe in learning fearlessly, building boldly, and creating software that makes a real impact on the world.*
-
-<br clear="right"/>
-
----
-
-## 🛠️ >> TECH_ARSENAL.SYS
+## `> github`
 
 <div align="center">
 
-### 🔴 LANGUAGES
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=abdullah-dev-5&theme=github_dark" width="49%" alt="profile details" />
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=abdullah-dev-5&theme=github_dark" width="49%" alt="stats" />
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge\&logo=javascript\&logoColor=black)
-![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge\&logo=cplusplus\&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge\&logo=html5\&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge\&logo=css3\&logoColor=white)
-
-### 🟢 FRONTEND
-
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge\&logo=react\&logoColor=black)
-![Framer](https://img.shields.io/badge/Framer-0055FF?style=for-the-badge\&logo=framer\&logoColor=white)
-![Photoshop](https://img.shields.io/badge/Photoshop-31A8FF?style=for-the-badge\&logo=adobe-photoshop\&logoColor=white)
-
-### 🔵 BACKEND
-
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge\&logo=node.js\&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge\&logo=flask\&logoColor=white)
-![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge\&logo=django\&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge\&logo=fastapi\&logoColor=white)
-
-### 🟡 DATABASES
-
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge\&logo=sqlite\&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge\&logo=mysql\&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge\&logo=postgresql\&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge\&logo=supabase\&logoColor=white)
-
-### 🟣 TOOLS & DEVOPS
-
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge\&logo=git\&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge\&logo=github\&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge\&logo=linux\&logoColor=black)
-![VSCode](https://img.shields.io/badge/VS%20Code-0078D4?style=for-the-badge\&logo=visual-studio-code\&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37726?style=for-the-badge\&logo=jupyter\&logoColor=white)
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=abdullah-dev-5&theme=github_dark" width="49%" alt="top languages" />
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=abdullah-dev-5&theme=github_dark" width="49%" alt="commit languages" />
 
 </div>
 
----
+<br/>
 
-## 📊 SYSTEM_ANALYTICS.LOG
+## `> roadmap`
 
-<div align="center">
+- [x] Started the coding journey and built first projects
+- [ ] Deploy a first production app
+- [ ] Contribute to open source
+- [ ] Build an AI / ML project
 
-### GitHub Activity
+<br/>
 
-![GitHub Profile Summary](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=abdullah-dev-5\&theme=github_dark)
-
-<br>
-
-![GitHub Stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=abdullah-dev-5\&theme=github_dark)
-
-![Top Languages](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=abdullah-dev-5\&theme=github_dark)
-
-</div>
-
----
-
-## 🔬 >> LEARNING_PROTOCOL.EXE
+## `> connect`
 
 <div align="center">
 
-<img src="https://media.giphy.com/media/LaVp0AyqR5bGsC5Cbm/giphy.gif" width="300" alt="Learning">
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0D1117?style=for-the-badge&logo=linkedin&logoColor=00E5FF)](https://www.linkedin.com/in/abdullah-hussain-6b179739b/)
+[![GitHub](https://img.shields.io/badge/GitHub-0D1117?style=for-the-badge&logo=github&logoColor=00E5FF)](https://github.com/abdullah-dev-5)
+[![Email](https://img.shields.io/badge/Email-0D1117?style=for-the-badge&logo=gmail&logoColor=00E5FF)](mailto:abdullahdev12125@gmail.com)
+[![Discord](https://img.shields.io/badge/Discord-0D1117?style=for-the-badge&logo=discord&logoColor=00E5FF)](https://discord.gg/noobplayeryt)
 
-</div>
+<br/>
 
-```bash
-╔══════════════════════════════════════════════════════════╗
-║           🎯 CURRENT LEARNING OBJECTIVES                ║
-╚══════════════════════════════════════════════════════════╝
+<sub>Always learning · Always building</sub>
 
-📍 PRIORITY_001: Advanced DSA (Python) 🐍
-   └─ Arrays, Linked Lists, Trees, Graphs
-   └─ Sorting, Searching, Dynamic Programming
-
-📍 PRIORITY_002: Web Development ⚡
-   └─ Frontend: React, HTML, CSS, JavaScript
-   └─ Backend: Node.js, Express, Databases
-   └─ Full Stack Integration & Deployment
-
-📍 PRIORITY_003: Project Building 🚀
-   └─ Building production-ready applications
-   └─ Real-world problem solving
-   └─ Version control & collaboration
-
-📍 PRIORITY_004: Machine Learning 🤖
-   └─ ML fundamentals & algorithms
-   └─ Data analysis with Python
-   └─ Building intelligent systems
-
-═══════════════════════════════════════════════════════════
-
-💡 MOTIVATION_CORE:
-   ✓ Learning cutting-edge technologies
-   ✓ Solving complex real-world problems
-   ✓ Building impactful projects
-   ✓ Leveling up skills every single day
-
-⏰ DEDICATION: 35+ coding hours per week
-🎯 FOCUS: Quality over quantity
-🚀 MINDSET: Always growing, never settling
-```
-
----
-
-## 🏆 >> PROJECT_ARCHIVES.DB
-
-<div align="center">
-
-```
-╔════════════════════════════════════════════════════╗
-║      🌐 CLASSIFIED OPERATIONS IN PROGRESS          ║
-╚════════════════════════════════════════════════════╝
-```
-
-| Status         | Project              | Description                           |
-| -------------- | -------------------- | ------------------------------------- |
-| 🟢 Active      | Full Stack Web App   | Building production-ready application |
-| 🟡 In Progress | Algorithm Visualizer | DSA visualization tool                |
-| 🟣 Research    | Machine Learning     | Exploring ML algorithms               |
-
-**Coming Soon:** 🚀 Live projects with repos!
-
-</div>
-
----
-
-## 🎯 >> MISSION_DIRECTIVE.SYS
-
-<div align="center">
-
-```yaml
-╔════════════════════════════════════════════════════════════╗
-║                    🎖️ MISSION BRIEFING 🎖️                 ║
-╚════════════════════════════════════════════════════════════╝
-
-PRIMARY_OBJECTIVE:
-  Build my first full-scale production projects
-  that solve real-world problems ✓
-
-SECONDARY_OBJECTIVE:
-  Master Data Structures & Algorithms
-  Become a skilled Full Stack Engineer ✓
-
-TERTIARY_OBJECTIVE:
-  Contribute to open-source communities
-  Help other developers grow ✓
-
-═════════════════════════════════════════════════════════════
-
-PERSONAL_QUOTE:
-  "Code like the laws of physics — precise, powerful,
-   and shaping the universe around you."
-
-COLLABORATION_STATUS: ✓ ENABLED
-LEARNING_STATUS: ✓ ACTIVE
-CONNECTION_STATUS: ✓ ALWAYS_ONLINE
-READY_FOR_CHALLENGES: ✓ TRUE
-```
-
-</div>
-
----
-
-## 🌐 >> NETWORK_CONNECTIONS.NET
-
-<div align="center">
-
-<img src="https://media.giphy.com/media/LMt9638dO8dftAjtco/giphy.gif" width="350" alt="Networking">
-
-</div>
-
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/🔗%20LINKEDIN-0077B5?style=for-the-badge\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/abdullah-hussain-6b179739b/)
-[![GitHub](https://img.shields.io/badge/📁%20GITHUB-181717?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/abdullah-dev-5)
-[![Gmail](https://img.shields.io/badge/📧%20EMAIL-D14836?style=for-the-badge\&logo=gmail\&logoColor=white)](mailto:abdullahdev12125@gmail.com)
-[![Discord](https://img.shields.io/badge/💬%20DISCORD-7289DA?style=for-the-badge\&logo=discord\&logoColor=white)](https://discord.gg/noobplayeryt)
-
-</div>
-
----
-
-## ⚡ >> SYSTEM_STATS.INF
-
-<div align="center">
-
-![Stats](https://img.shields.io/badge/⚡%20Primary%20Tech-Python%20%7C%20JavaScript%20%7C%20C%2B%2B-00FF41?style=for-the-badge\&logo=code\&logoColor=00FF41)
-
-![Experience](https://img.shields.io/badge/%F0%9F%9B%A0%EF%B8%8F%20Experience-Beginner%20%7C%20Student%20Projects%20%7C%201%2B%20Year-FF0080?style=for-the-badge)
-
-![Hours](https://img.shields.io/badge/%F0%9F%92%AA%20Weekly%20Coding-35%2B%20Hours-00FFFF?style=for-the-badge\&logoColor=black)
-
-![Trophy](https://github-trophies.vercel.app/?username=abdullah-dev-5\&theme=radical\&no-frame=true\&no-bg=true\&margin-w=4)
-
-</div>
-
----
-
-## 🎮 >> GAMIFICATION_STATUS
-
-<div align="center">
-
-```
-┌─────────────────────────────────────────────┐
-│          🏅 ACHIEVEMENT UNLOCKED 🏅          │
-├─────────────────────────────────────────────┤
-│ ✓ Started Coding Journey                    │
-│ ✓ Built First Projects                      │
-│ ✓ Mastering DSA Concepts                    │
-│ 🔜 Deploy First Production App              │
-│ 🔜 Contribute to Open Source                │
-│ 🔜 Become Full Stack Master                 │
-│ 🔜 Build AI/ML Projects                     │
-└─────────────────────────────────────────────┘
-```
-
-</div>
-
----
-
-<div align="center">
-
-# ⚡ SYSTEM STATUS: ONLINE ⚡
-
-```
-> INITIALIZATION: COMPLETE ✓
-> NEURAL_CONNECTIONS: ACTIVE ✓
-> COLLABORATION_MODE: ENABLED ✓
-> AWAITING: NEXT CHALLENGE
-> MISSION_PRIORITY: BUILDING THE FUTURE
-```
-
-<img src="https://media.giphy.com/media/xUA7aM09ByyR1w5YWc/giphy.gif" width="400" alt="Hacking">
-
-</div>
-
----
-
-<div align="center">
-
-### 🚀 Ready to collaborate? Let's build something amazing!
-
-**Made with ❤️ by Abdullah Hussain**
-*Forever Learning • Always Building • Constantly Improving*
-
-![Made Badge](https://img.shields.io/badge/Made%20with-Love%20%26%20Code-FF0080?style=flat-square)
-![Last Updated](https://img.shields.io/badge/Last%20Updated-2026-00FF41?style=flat-square)
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:00E5FF,100:0D1117&height=60&section=footer" width="100%" alt="footer" />
 
 </div>

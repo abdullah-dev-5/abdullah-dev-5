@@ -102,8 +102,8 @@ Job application tracker for managing applications, tracking statuses, searching 
 <img src="https://skillicons.dev/icons?i=django,html,css,js&theme=dark" height="30" alt="Django, HTML, CSS, JavaScript" />
 
 <br><br>
-
-<sub>In development</sub>
+<sub>Version 1.0 completed,</sub>
+<sub>Still in development</sub>
 
 </td>
 
@@ -122,7 +122,6 @@ Python Dash application for exploring data structures and algorithms through int
 
 <br><br>
 
-<sub>In development</sub>
 
 </td>
 </tr>
@@ -144,7 +143,6 @@ Task management application built around a learner-oriented workflow.
 
 <br><br>
 
-<sub>In development</sub>
 
 </td>
 
@@ -160,7 +158,6 @@ E-commerce project featuring products, sellers, user profiles, carts, and seller
 
 <br><br>
 
-<sub>School project</sub>
 
 </td>
 </tr>

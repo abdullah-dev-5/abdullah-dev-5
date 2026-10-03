@@ -14,17 +14,17 @@ jobs:
 
     steps:
       - name: Generate contribution snake
-        uses: Platane/snk@v3
+        uses: Platane/snk/svg-only@v3
         with:
           github_user_name: abdullah-dev-5
           outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/snake-dark.svg?color_snake=%23f0b040&color_dots=%23262626,%234a3a1c,%237a5a1e,%23b8821f,%23f0b040
+            dist/snake-light.svg?color_snake=%23333333&color_dots=%23ebe6dc,%23f3d9a4,%23e8b560,%23d98a1f,%23a85d0a
 
       - name: Publish snake
         uses: crazy-max/ghaction-github-pages@v4
         with:
+          target_branch: output
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BUILD_DIR: dist

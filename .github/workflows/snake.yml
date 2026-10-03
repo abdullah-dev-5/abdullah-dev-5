@@ -1,30 +1,862 @@
-name: Generate Snake
+#!/usr/bin/env python3
 
-on:
-  schedule:
-    - cron: "0 0 * * *"
-  workflow_dispatch:
+"""
+ZENO-style contribution snake.
 
-permissions:
-  contents: write
+Fetches your real contribution calendar from GitHub and renders a
+hand-built animated SVG: a tapered, glowing snake with eyes and a
+flicking tongue that eats your contributions, bursts each one into a
+ring, and tracks progress.
 
-jobs:
-  generate:
-    runs-on: ubuntu-latest
+Pure standard library. No third-party renderer.
 
-    steps:
-      - name: Generate contribution snake
-        uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: abdullah-dev-5
-          outputs: |
-            dist/snake-dark.svg?color_snake=%23f0b040&color_dots=%23262626,%234a3a1c,%237a5a1e,%23b8821f,%23f0b040
-            dist/snake-light.svg?color_snake=%23333333&color_dots=%23ebe6dc,%23f3d9a4,%23e8b560,%23d98a1f,%23a85d0a
+Usage in CI:
+    GITHUB_TOKEN=... GH_USER=name python scripts/snake.py
 
-      - name: Publish snake
-        uses: crazy-max/ghaction-github-pages@v4
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+Local test:
+    FAKE=1 python scripts/snake.py
+"""
+
+import json
+import os
+import random
+import sys
+import urllib.request
+from xml.sax.saxutils import escape
+
+
+# ---------- palette ----------
+
+BG, BORDER = "#141413", "#33312c"
+CREAM, MUTED, AMBER, VERM = "#ece4d3", "#8d8678", "#e0a030", "#d9482b"
+
+EMPTY, EMBER, FLASH = "#262624", "#2b2519", "#fff1d2"
+
+LEVELS = [
+    "#262624",
+    "#4a3a1c",
+    "#7a5a1e",
+    "#b8821f",
+    "#f0b040",
+]
+
+HEAD_COL, TAIL_COL = (255, 241, 210), (200, 112, 42)
+
+MONO = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
+
+
+# ---------- geometry ----------
+
+CELL, PITCH, ROWS = 14, 17, 7
+W, H = 960, 262
+X0, Y0 = 32, 70
+
+L = 14            # snake length (head + body)
+STEP = 0.055      # seconds per cell
+HOLD = 30         # idle steps at the end of the loop
+
+LEVEL_MAP = {
+    "NONE": 0,
+    "FIRST_QUARTILE": 1,
+    "SECOND_QUARTILE": 2,
+    "THIRD_QUARTILE": 3,
+    "FOURTH_QUARTILE": 4,
+}
+
+
+def fetch(user, token):
+    q = """query($login:String!){user(login:$login){contributionsCollection{
+      contributionCalendar{totalContributions weeks{contributionDays{
+      contributionCount contributionLevel weekday date}}}}}}"""
+
+    req = urllib.request.Request(
+        "https://api.github.com/graphql",
+        data=json.dumps({
+            "query": q,
+            "variables": {"login": user}
+        }).encode(),
+        headers={
+            "Authorization": f"bearer {token}",
+            "Content-Type": "application/json",
+            "User-Agent": "zeno-snake"
+        }
+    )
+
+    with urllib.request.urlopen(req, timeout=30) as r:
+        data = json.load(r)
+
+    cal = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]
+
+    weeks = []
+
+    for w in cal["weeks"]:
+        col = [None] * ROWS
+
+        for d in w["contributionDays"]:
+            col[d["weekday"]] = (
+                d["contributionCount"],
+                LEVEL_MAP[d["contributionLevel"]]
+            )
+
+        weeks.append(col)
+
+    return weeks, cal["totalContributions"]
+
+
+def fake():
+    rnd = random.Random(7)
+
+    weeks, total = [], 0
+
+    for c in range(53):
+        col = []
+
+        for r in range(ROWS):
+            if c == 52 and r > 3:
+                col.append(None)
+                continue
+
+            n = (
+                0
+                if rnd.random() < 0.45
+                else rnd.choice([1, 2, 3, 5, 8, 13, 21])
+            )
+
+            lvl = (
+                0 if n == 0
+                else 1 if n < 3
+                else 2 if n < 6
+                else 3 if n < 12
+                else 4
+            )
+
+            total += n
+            col.append((n, lvl))
+
+        weeks.append(col)
+
+    return weeks, total
+
+
+def stats(weeks):
+    best, streak, longest = 0, 0, 0
+
+    for col in weeks:
+        for cell in col:
+            if cell is None:
+                continue
+
+            n = cell[0]
+
+            best = max(best, n)
+
+            streak = streak + 1 if n > 0 else 0
+
+            longest = max(longest, streak)
+
+    return best, longest
+
+
+def cx(col):
+    return X0 + col * PITCH + CELL // 2
+
+
+def cy(row):
+    return Y0 + row * PITCH + CELL // 2
+
+
+def build_path(ncols):
+    cells = []
+
+    for c in range(ncols):
+        rows = range(ROWS) if c % 2 == 0 else range(ROWS - 1, -1, -1)
+
+        cells += [
+            (c, r)
+            for r in rows
+        ]
+
+    prefix = [
+        (0, -k)
+        for k in range(L, 0, -1)
+    ]
+
+    last_r = cells[-1][1]
+
+    d = 1 if last_r == ROWS - 1 else -1
+
+    suffix = [
+        (ncols - 1, last_r + d * k)
+        for k in range(1, L + 3)
+    ]
+
+    return prefix + cells + suffix, len(prefix)
+
+
+def mix(a, b, t):
+    return "#%02x%02x%02x" % tuple(
+        round(a[i] + (b[i] - a[i]) * t)
+        for i in range(3)
+    )
+
+
+def f(x):
+    return f"{x:.5f}".rstrip("0").rstrip(".")
+
+
+def render(weeks, total, user, at=None):
+    """
+    at=None -> animated SVG.
+    at=0..1 -> static frame for previews.
+    """
+
+    ncols = len(weeks)
+
+    path, npre = build_path(ncols)
+
+    M = len(path)
+
+    K = M + L + HOLD
+
+    T = K * STEP
+
+    pts = [
+        (cx(c), cy(r))
+        for c, r in path
+    ]
+
+    def seg_idx(k, i):
+        return min(
+            M - 1,
+            max(0, k - i)
+        )
+
+    # eat times per cell
+    index_of = {
+        p: n
+        for n, p in enumerate(path)
+    }
+
+    best, longest = stats(weeks)
+
+    out = []
+    A = out.append
+
+    A(
+        f'<svg xmlns="http://www.w3.org/2000/svg" '
+        f'viewBox="0 0 {W} {H}" width="100%" role="img" '
+        f'aria-label="Animated snake eating {total} GitHub contributions">'
+    )
+
+    A(
+        f'''<defs>
+        <clipPath id="field">
+            <rect
+                x="{X0-12}"
+                y="{Y0-6}"
+                width="{ncols*PITCH+14}"
+                height="{ROWS*PITCH+8}"
+            />
+        </clipPath>
+
+        <filter
+            id="blur"
+            x="-80%"
+            y="-80%"
+            width="260%"
+            height="260%"
+        >
+            <feGaussianBlur stdDeviation="6"/>
+        </filter>
+
+        <radialGradient
+            id="glow"
+            cx="50%"
+            cy="40%"
+            r="70%"
+        >
+            <stop
+                offset="0"
+                stop-color="{AMBER}"
+                stop-opacity="0.10"
+            />
+            <stop
+                offset="1"
+                stop-color="{AMBER}"
+                stop-opacity="0"
+            />
+        </radialGradient>
+        </defs>
+
+        <rect
+            width="{W}"
+            height="{H}"
+            rx="14"
+            fill="{BG}"
+        />
+
+        <rect
+            width="{W}"
+            height="{H}"
+            rx="14"
+            fill="url(#glow)"
+        />
+
+        <rect
+            x="1"
+            y="1"
+            width="{W-2}"
+            height="{H-2}"
+            rx="13"
+            fill="none"
+            stroke="{BORDER}"
+            stroke-width="2"
+        />'''
+    )
+
+    # HUD
+    A(
+        f'<text x="{X0}" y="38" '
+        f'font-family="{MONO}" font-size="12" '
+        f'letter-spacing="3.5" fill="{AMBER}">'
+        f'CONTRIBUTION RUN</text>'
+    )
+
+    A(
+        f'<text x="{W-X0}" y="38" '
+        f'font-family="{MONO}" font-size="12" '
+        f'fill="{MUTED}" text-anchor="end">'
+        f'{total} contributions in the last year'
+        f'</text>'
+    )
+
+    # fading scene
+    if at is None:
+        A(
+            f'<g opacity="0">'
+            f'<animate attributeName="opacity" '
+            f'dur="{f(T)}s" '
+            f'repeatCount="indefinite" '
+            f'keyTimes="0;0.02;0.95;0.985;1" '
+            f'values="0;1;1;0;0"/>'
+        )
+    else:
+        A('<g>')
+
+    # cells
+    kt_last = K - 1
+
+    for c, col in enumerate(weeks):
+        for r, cell in enumerate(col):
+
+            if cell is None:
+                continue
+
+            n, lvl = cell
+
+            x = X0 + c * PITCH
+            y = Y0 + r * PITCH
+
+            base = LEVELS[lvl]
+
+            if at is None and lvl > 0:
+
+                t = index_of[(c, r)] / kt_last
+
+                kt = (
+                    f"0;"
+                    f"{f(t)};"
+                    f"{f(t+0.003)};"
+                    f"{f(t+0.02)};"
+                    f"1"
+                )
+
+                A(
+                    f'<rect '
+                    f'x="{x}" '
+                    f'y="{y}" '
+                    f'width="{CELL}" '
+                    f'height="{CELL}" '
+                    f'rx="3" '
+                    f'fill="{base}">'
+                    f'<animate '
+                    f'attributeName="fill" '
+                    f'dur="{f(T)}s" '
+                    f'repeatCount="indefinite" '
+                    f'keyTimes="{kt}" '
+                    f'values="{base};{base};{FLASH};{EMBER};{EMBER}"/>'
+                    f'</rect>'
+                )
+
+            elif at is not None and lvl > 0:
+
+                eaten = (
+                    index_of[(c, r)]
+                    <= at * (K - 1)
+                )
+
+                A(
+                    f'<rect '
+                    f'x="{x}" '
+                    f'y="{y}" '
+                    f'width="{CELL}" '
+                    f'height="{CELL}" '
+                    f'rx="3" '
+                    f'fill="{EMBER if eaten else base}"/>'
+                )
+
+            else:
+
+                A(
+                    f'<rect '
+                    f'x="{x}" '
+                    f'y="{y}" '
+                    f'width="{CELL}" '
+                    f'height="{CELL}" '
+                    f'rx="3" '
+                    f'fill="{base}"/>'
+                )
+
+    # burst rings
+    if at is None:
+
+        for c, col in enumerate(weeks):
+            for r, cell in enumerate(col):
+
+                if cell is None or cell[1] == 0:
+                    continue
+
+                t = index_of[(c, r)] / kt_last
+
+                kt = (
+                    f"0;"
+                    f"{f(t)};"
+                    f"{f(t+0.0008)};"
+                    f"{f(t+0.025)};"
+                    f"1"
+                )
+
+                A(
+                    f'<circle '
+                    f'cx="{cx(c)}" '
+                    f'cy="{cy(r)}" '
+                    f'r="5" '
+                    f'fill="none" '
+                    f'stroke="{AMBER}" '
+                    f'stroke-width="1.6" '
+                    f'opacity="0" '
+                    f'clip-path="url(#field)">'
+                    f'<animate '
+                    f'attributeName="r" '
+                    f'dur="{f(T)}s" '
+                    f'repeatCount="indefinite" '
+                    f'keyTimes="{kt}" '
+                    f'values="5;5;5;19;19"/>'
+                    f'<animate '
+                    f'attributeName="opacity" '
+                    f'dur="{f(T)}s" '
+                    f'repeatCount="indefinite" '
+                    f'keyTimes="{kt}" '
+                    f'values="0;0;0.9;0;0"/>'
+                    f'</circle>'
+                )
+
+    A('</g>')
+
+    # snake
+    A('<g clip-path="url(#field)">')
+
+    for i in range(L - 1, 0, -1):
+
+        tt = i / (L - 1)
+
+        col = mix(
+            HEAD_COL,
+            TAIL_COL,
+            tt ** 0.8
+        )
+
+        r = 8.2 - 5.0 * tt
+
+        if at is None:
+
+            xs = ";".join(
+                str(pts[seg_idx(k, i)][0])
+                for k in range(K)
+            )
+
+            ys = ";".join(
+                str(pts[seg_idx(k, i)][1])
+                for k in range(K)
+            )
+
+            A(
+                f'<circle '
+                f'r="{r:.1f}" '
+                f'fill="{col}" '
+                f'stroke="{BG}" '
+                f'stroke-width="1.4" '
+                f'cx="{pts[0][0]}" '
+                f'cy="{pts[0][1]}">'
+                f'<animate '
+                f'attributeName="cx" '
+                f'dur="{f(T)}s" '
+                f'repeatCount="indefinite" '
+                f'values="{xs}"/>'
+                f'<animate '
+                f'attributeName="cy" '
+                f'dur="{f(T)}s" '
+                f'repeatCount="indefinite" '
+                f'values="{ys}"/>'
+                f'</circle>'
+            )
+
+        else:
+
+            k = round(at * (K - 1))
+
+            p = pts[
+                seg_idx(k, i)
+            ]
+
+            A(
+                f'<circle '
+                f'r="{r:.1f}" '
+                f'fill="{col}" '
+                f'stroke="{BG}" '
+                f'stroke-width="1.4" '
+                f'cx="{p[0]}" '
+                f'cy="{p[1]}"/>'
+            )
+
+    def angle(k):
+
+        a = pts[
+            seg_idx(k, 0)
+        ]
+
+        b = pts[
+            seg_idx(k + 1, 0)
+        ]
+
+        if a == b:
+
+            a = pts[
+                seg_idx(k - 1, 0)
+            ]
+
+            b = pts[
+                seg_idx(k, 0)
+            ]
+
+        dx = b[0] - a[0]
+        dy = b[1] - a[1]
+
+        return (
+            0 if dx > 0
+            else 180 if dx < 0
+            else 90 if dy > 0
+            else -90
+        )
+
+    head = f'''
+        <circle
+            r="15"
+            fill="{AMBER}"
+            opacity="0.55"
+            filter="url(#blur)"
+        />
+
+        <g>
+
+            <path
+                d="M9 0 L16 0
+                   M16 0 L20 -3.2
+                   M16 0 L20 3.2"
+                fill="none"
+                stroke="{VERM}"
+                stroke-width="1.7"
+                stroke-linecap="round"
+            >
+                <animate
+                    attributeName="opacity"
+                    values="1;1;0;0;1"
+                    keyTimes="0;0.45;0.5;0.8;1"
+                    dur="0.9s"
+                    repeatCount="indefinite"
+                />
+            </path>
+
+            <ellipse
+                rx="10.8"
+                ry="9"
+                fill="{CREAM}"
+                stroke="{BG}"
+                stroke-width="1.6"
+            />
+
+            <ellipse
+                rx="10.8"
+                ry="9"
+                fill="{FLASH}"
+                opacity="0.55"
+            />
+
+            <circle
+                cx="3"
+                cy="-4.2"
+                r="2.3"
+                fill="{BG}"
+            />
+
+            <circle
+                cx="3"
+                cy="4.2"
+                r="2.3"
+                fill="{BG}"
+            />
+
+            <circle
+                cx="3.7"
+                cy="-4.8"
+                r="0.8"
+                fill="{CREAM}"
+            />
+
+            <circle
+                cx="3.7"
+                cy="3.6"
+                r="0.8"
+                fill="{CREAM}"
+            />
+
+        </g>
+    '''
+
+    if at is None:
+
+        vals = ";".join(
+            f"{pts[seg_idx(k, 0)][0]} "
+            f"{pts[seg_idx(k, 0)][1]}"
+            for k in range(K)
+        )
+
+        angs = ";".join(
+            str(angle(k))
+            for k in range(K)
+        )
+
+        kts = ";".join(
+            f(k / (K - 1))
+            for k in range(K)
+        )
+
+        A(
+            f'<g>'
+            f'<animateTransform '
+            f'attributeName="transform" '
+            f'type="translate" '
+            f'dur="{f(T)}s" '
+            f'repeatCount="indefinite" '
+            f'values="{vals}"/>'
+        )
+
+        glow, rest = head.split("<g>", 1)
+
+        A(glow)
+
+        A(
+            f'<g>'
+            f'<animateTransform '
+            f'attributeName="transform" '
+            f'type="rotate" '
+            f'dur="{f(T)}s" '
+            f'repeatCount="indefinite" '
+            f'calcMode="discrete" '
+            f'keyTimes="{kts}" '
+            f'values="{angs}"/>'
+            f'{rest}'
+        )
+
+        A('</g>')
+
+    else:
+
+        k = round(at * (K - 1))
+
+        p = pts[
+            seg_idx(k, 0)
+        ]
+
+        glow, rest = head.split("<g>", 1)
+
+        A(
+            f'<g transform="translate({p[0]} {p[1]})">'
+            f'{glow}'
+            f'<g transform="rotate({angle(k)})">'
+            f'{rest}'
+            f'</g>'
+        )
+
+    A('</g>')  # snake clip group
+
+    # progress bar + stats
+
+    bx = X0
+    by = Y0 + ROWS * PITCH + 22
+    bw = W - 2 * X0
+
+    A(
+        f'<rect '
+        f'x="{bx}" '
+        f'y="{by}" '
+        f'width="{bw}" '
+        f'height="5" '
+        f'rx="2.5" '
+        f'fill="{EMPTY}"/>'
+    )
+
+    if at is None:
+
+        t0 = npre / (K - 1)
+
+        t1 = (
+            npre
+            + len(path)
+            - npre
+            - (L + 2)
+        ) / (K - 1)
+
+        A(
+            f'<rect '
+            f'x="{bx}" '
+            f'y="{by}" '
+            f'width="0" '
+            f'height="5" '
+            f'rx="2.5" '
+            f'fill="{AMBER}">'
+            f'<animate '
+            f'attributeName="width" '
+            f'dur="{f(T)}s" '
+            f'repeatCount="indefinite" '
+            f'keyTimes="0;{f(t0)};{f(t1)};1" '
+            f'values="0;0;{bw};{bw}"/>'
+            f'</rect>'
+        )
+
+    else:
+
+        prog = min(
+            1,
+            max(
+                0,
+                (
+                    at * (K - 1) - npre
+                )
+                / (
+                    len(path)
+                    - npre
+                    - (L + 2)
+                )
+            )
+        )
+
+        A(
+            f'<rect '
+            f'x="{bx}" '
+            f'y="{by}" '
+            f'width="{bw*prog:.1f}" '
+            f'height="5" '
+            f'rx="2.5" '
+            f'fill="{AMBER}"/>'
+        )
+
+    sy = by + 30
+
+    A(
+        f'<g font-family="{MONO}" font-size="12.5">'
+
+        f'<text x="{bx}" y="{sy}" fill="{MUTED}">'
+        f'BEST DAY '
+        f'<tspan fill="{CREAM}">{best}</tspan>'
+        f'</text>'
+
+        f'<text x="{bx+150}" y="{sy}" fill="{MUTED}">'
+        f'LONGEST STREAK '
+        f'<tspan fill="{CREAM}">{longest} days</tspan>'
+        f'</text>'
+
+        f'<text x="{W-X0}" y="{sy}" '
+        f'fill="{MUTED}" text-anchor="end">'
+        f'less '
+        + "".join(
+            f'<tspan fill="{c}"> ■</tspan>'
+            for c in LEVELS
+        )
+        + ' more'
+        f'</text>'
+
+        f'</g>'
+    )
+
+    A('</svg>')
+
+    return "\n".join(out)
+
+
+def main():
+
+    if os.environ.get("FAKE"):
+
+        weeks, total = fake()
+
+    else:
+
+        weeks, total = fetch(
+            os.environ["GH_USER"],
+            os.environ["GITHUB_TOKEN"]
+        )
+
+    os.makedirs("dist", exist_ok=True)
+
+    svg = render(
+        weeks,
+        total,
+        os.environ.get("GH_USER", "user")
+    )
+
+    open(
+        "dist/snake.svg",
+        "w",
+        encoding="utf-8"
+    ).write(svg)
+
+    print(
+        f"wrote dist/snake.svg "
+        f"({len(svg)//1024} KB), "
+        f"{total} contributions"
+    )
+
+    if os.environ.get("PREVIEW"):
+
+        for name, a in (
+            ("a", 0.12),
+            ("b", 0.5),
+            ("c", 0.86)
+        ):
+
+            open(
+                f"/tmp/snake_{name}.svg",
+                "w"
+            ).write(
+                render(
+                    weeks,
+                    total,
+                    "user",
+                    at=a
+                )
+            )
+
+
+if __name__ == "__main__":
+    main()
